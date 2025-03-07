@@ -1,0 +1,155 @@
+/* Estilização geral do aplicativo */
+.App {
+  max-width: 600px; /* Largura máxima do contêiner */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  padding: 20px; /* Espaçamento interno */
+  font-family: Arial, sans-serif; /* Fonte padrão */
+}
+
+h1 {
+  text-align: center; /* Centraliza o título */
+  color: #333; /* Cor do texto */
+}
+
+.contador {
+  text-align: center; /* Centraliza o contador */
+  margin: 10px 0; /* Espaçamento vertical */
+  color: #666; /* Cor do texto */
+  font-size: 14px; /* Tamanho da fonte */
+}
+
+/* Container para os campos de entrada */
+.input-container {
+  display: flex; /* Alinha os elementos horizontalmente */
+  gap: 10px; /* Espaço entre os elementos */
+  margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilização dos campos de entrada */
+input[type="text"],
+input[type="date"] {
+  flex: 1; /* Ocupa o espaço disponível */
+  padding: 8px; /* Espaçamento interno */
+  border: 1px solid #ddd; /* Borda cinza clara */
+  border-radius: 4px; /* Bordas arredondadas */
+  font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilização dos botões */
+button {
+  padding: 8px 16px; /* Espaçamento interno */
+  background-color: #007bff; /* Cor de fundo azul */
+  color: white; /* Cor do texto */
+  border: none; /* Remove borda padrão */
+  border-radius: 4px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de clique */
+  transition: background-color 0.2s; /* Transição suave para hover */
+}
+
+button:hover {
+  background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilização da lista de tarefas */
+.lista-tarefas {
+  list-style: none; /* Remove marcadores da lista */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #ddd; /* Contorno cinza */
+  border-radius: 8px; /* Bordas arredondadas */
+  background-color: #fff; /* Fundo branco */
+}
+
+/* Estilização de cada item da lista */
+.tarefa {
+  display: flex; /* Alinha os elementos horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 10px; /* Espaço entre elementos */
+  padding: 10px; /* Espaçamento interno */
+  margin-bottom: 10px; /* Espaçamento inferior */
+  background-color: #f8f9fa; /* Fundo cinza claro */
+  border-radius: 4px; /* Bordas arredondadas */
+  border: 1px solid #eee; /* Borda sutil */
+  cursor: move; /* Indica que o item é arrastável */
+}
+
+.tarefa.concluida span {
+  text-decoration: line-through; /* Risca o texto das tarefas concluídas */
+  color: #888; /* Cor cinza */
+}
+
+.tarefa.atrasada span {
+  color: #dc3545; /* Vermelho para tarefas atrasadas */
+  font-weight: bold; /* Negrito */
+}
+
+/* Botão de remover */
+.botao-remover {
+  background-color: #dc3545; /* Cor vermelha */
+  margin-left: auto; /* Alinha à direita */
+}
+
+.botao-remover:hover {
+  background-color: #c82333; /* Vermelho mais escuro ao passar o mouse */
+}
+
+/* Estilização do modal */
+.modal {
+  position: fixed; /* Fixo na tela */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa toda a largura */
+  height: 100%; /* Ocupa toda a altura */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+  display: flex; /* Centraliza o conteúdo */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Conteúdo do modal */
+.modal-content {
+  background-color: white; /* Fundo branco */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 8px; /* Bordas arredondadas */
+  width: 100%; /* Largura total */
+  max-width: 400px; /* Largura máxima */
+}
+
+.modal-content h2 {
+  margin-top: 0; /* Remove margem superior */
+  margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+.modal-content input {
+  width: 100%; /* Ocupa toda a largura */
+  margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+.modal-content button {
+  margin-right: 10px; /* Espaço à direita */
+}
+
+.modal-content button:last-child {
+  background-color: #6c757d; /* Cor cinza para o botão Cancelar */
+}
+
+.modal-content button:last-child:hover {
+  background-color: #5a6268; /* Cinza mais escuro ao passar o mouse */
+}
+
+/* Estilização da mensagem de erro */
+.mensagem-erro {
+  color: #dc3545; /* Cor vermelha */
+  font-size: 14px; /* Tamanho da fonte */
+  margin-bottom: 10px; /* Espaçamento inferior */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Reponsividade */
+@media (max-width: 600px) {
+  .input-container {
+    flex-direction: column;
+  }
+  .tarefa {
+    flex-wrap: wrap;
+  }
+}
